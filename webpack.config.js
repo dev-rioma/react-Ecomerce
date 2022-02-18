@@ -13,6 +13,16 @@ module.exports = {
     mode: 'development', 
     resolve: {
         extensions: ['.js', '.jsx'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@pages': path.resolve(__dirname, 'src/pages/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+            '@routes': path.resolve(__dirname, 'src/routes/'),
+            '@context': path.resolve(__dirname, 'src/context/'),
+        }
     },
     module: {
         rules: [
@@ -41,7 +51,7 @@ module.exports = {
                 
             },
             {
-                test:/\.(png|svg|jpg|gif)$/,
+                test: /\.(png|svg|jpg|gif)$/,
                 type: 'asset',
             }
         ]
